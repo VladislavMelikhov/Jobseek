@@ -10,4 +10,10 @@ sealed interface TabsScreen : Screen {
 
     @Serializable
     data object Messages : TabsScreen
+
+    @Serializable
+    data object Saved : TabsScreen
+
+    @Serializable
+    data object Notifications : TabsScreen
 }

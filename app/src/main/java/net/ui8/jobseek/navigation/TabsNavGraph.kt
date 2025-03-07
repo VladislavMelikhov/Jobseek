@@ -6,6 +6,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import net.ui8.jobseek.ui.screens.home.HomeScreen
 import net.ui8.jobseek.ui.screens.messages.MessagesScreen
+import net.ui8.jobseek.ui.screens.notifications.NotificationsScreen
+import net.ui8.jobseek.ui.screens.saved.SavedScreen
 
 @Composable
 fun SetupTabsNavGraph(
@@ -20,6 +22,12 @@ fun SetupTabsNavGraph(
         }
         composable<TabsScreen.Messages> {
             MessagesScreen()
+        }
+        composable<TabsScreen.Saved> {
+            SavedScreen()
+        }
+        composable<TabsScreen.Notifications> {
+            NotificationsScreen()
         }
     }
 }

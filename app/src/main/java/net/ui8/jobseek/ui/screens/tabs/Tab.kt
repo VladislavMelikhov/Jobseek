@@ -34,14 +34,16 @@ enum class Tab(
         unselectedIcon = Icons.Outlined.Email,
         correspondingScreen = TabsScreen.Messages,
     ),
-//    SAVED(
-//        title = R.string.saved,
-//        selectedIcon = Icons.Filled.Favorite,
-//        unselectedIcon = Icons.Outlined.FavoriteBorder,
-//    ),
-//    NOTIFICATIONS(
-//        title = R.string.notifications,
-//        selectedIcon = Icons.Filled.Notifications,
-//        unselectedIcon = Icons.Outlined.Notifications,
-//    )
+    SAVED(
+        title = R.string.saved,
+        selectedIcon = Icons.Filled.Favorite,
+        unselectedIcon = Icons.Outlined.FavoriteBorder,
+        correspondingScreen = TabsScreen.Saved,
+    ),
+    NOTIFICATIONS(
+        title = R.string.notifications,
+        selectedIcon = Icons.Filled.Notifications,
+        unselectedIcon = Icons.Outlined.Notifications,
+        correspondingScreen = TabsScreen.Notifications,
+    )
 }
