@@ -1,10 +1,7 @@
 package net.ui8.jobseek.navigation
 
-import kotlinx.serialization.Serializable
+interface Screen {
 
-@Serializable
-sealed interface Screen {
-
-    @Serializable
-    data object Tabs : Screen
+    val route: String
+        get() = javaClass.canonicalName ?: throw Exception("Screen class must have name")
 }

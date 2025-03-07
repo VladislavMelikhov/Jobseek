@@ -4,18 +4,22 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import net.ui8.jobseek.ui.screens.tabs.TabsScreen
+import net.ui8.jobseek.ui.screens.home.HomeScreen
+import net.ui8.jobseek.ui.screens.messages.MessagesScreen
 
 @Composable
-fun SetupNavGraph(
+fun SetupTabsNavGraph(
     navController: NavHostController,
 ) {
     NavHost(
         navController = navController,
-        startDestination = Screen.Tabs,
+        startDestination = TabsScreen.Home,
     ) {
-        composable<Screen.Tabs> {
-            TabsScreen()
+        composable<TabsScreen.Home> {
+            HomeScreen()
+        }
+        composable<TabsScreen.Messages> {
+            MessagesScreen()
         }
     }
 }

@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.compose.rememberNavController
-import net.ui8.jobseek.navigation.SetupNavGraph
+import net.ui8.jobseek.navigation.SetupMainNavGraph
 import net.ui8.jobseek.ui.theme.JobseekTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,7 +14,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             JobseekTheme {
                 val navController = rememberNavController()
-                SetupNavGraph(
+                SetupMainNavGraph(
                     navController = navController,
                 )
             }
