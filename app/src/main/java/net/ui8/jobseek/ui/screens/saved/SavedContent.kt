@@ -3,6 +3,8 @@ package net.ui8.jobseek.ui.screens.saved
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -12,14 +14,17 @@ import net.ui8.jobseek.ui.theme.JobseekTheme
 
 @Composable
 fun SavedContent() {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        Text(
-            text = "Saved Tab",
-        )
+    Surface {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Text(
+                color = MaterialTheme.colorScheme.onSurface,
+                text = "Saved Tab",
+            )
+        }
     }
 }
 
