@@ -71,7 +71,7 @@ private fun BottomNavigationBar(
     onTabClick: (Tab) -> Unit
 ) {
     NavigationBar(
-        containerColor = MaterialTheme.colorScheme.primaryContainer
+        containerColor = MaterialTheme.colorScheme.surfaceContainer
     ) {
         tabs.forEach { tab ->
             val isSelectedTab: Boolean =
@@ -87,7 +87,7 @@ private fun BottomNavigationBar(
                 selected = isSelectedTab,
                 colors = NavigationBarItemDefaults.colors(
                     selectedIconColor = MaterialTheme.colorScheme.primary,
-                    unselectedIconColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                    unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
                     indicatorColor = Color.Transparent,
                 ),
                 onClick = { onTabClick(tab) },
