@@ -3,6 +3,7 @@ package net.ui8.jobseek.ui.screens.home
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import net.ui8.jobseek.data.jobs.sample.SampleJobs
@@ -14,7 +15,12 @@ fun HomeContent() {
         modifier = Modifier
             .fillMaxSize()
     ) {
-        JobsList(jobs = SampleJobs.popular)
+        val uiItems = remember {
+            JobsUiItemsConverter.convertToUiItems(
+                jobs = SampleJobs.popular
+            )
+        }
+        JobsColumn(uiItems = uiItems)
     }
 }
 

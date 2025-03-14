@@ -24,7 +24,7 @@ import net.ui8.jobseek.ui.theme.JobseekTheme
 import net.ui8.jobseek.ui.theme.Padding
 
 @Composable
-fun JobListItem(
+fun JobsColumnItem(
     job: Job,
 ) {
     Surface(
@@ -96,11 +96,11 @@ fun JobListItem(
 
 @Composable
 @Preview
-fun JobListItemPreview() {
+fun JobsColumnItemPreview() {
     JobseekTheme(darkTheme = true) {
         val job = SampleJobs.JrExecutiveBurgerKing
         val company = job.company
-        JobListItem(
+        JobsColumnItem(
             job = job
                 .copy(
                     title = job.title + " some long long long long text",
