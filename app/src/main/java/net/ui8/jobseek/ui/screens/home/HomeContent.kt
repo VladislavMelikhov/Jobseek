@@ -7,6 +7,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import net.ui8.jobseek.data.jobs.sample.SampleJobs
+import net.ui8.jobseek.ui.screens.home.items.HomeColumn
+import net.ui8.jobseek.ui.screens.home.items.HomeUiItemsConverterImpl
 import net.ui8.jobseek.ui.theme.JobseekTheme
 
 @Composable
@@ -15,12 +17,16 @@ fun HomeContent() {
         modifier = Modifier
             .fillMaxSize()
     ) {
-        val uiItems = remember {
-            JobsUiItemsConverter.convertToUiItems(
-                jobs = SampleJobs.popular
+        val converter = remember {
+            HomeUiItemsConverterImpl()
+        }
+        val homeUiItems = remember {
+            converter.convertToUiItems(
+                popularJobs = SampleJobs.popular,
+                recommendedJobs = SampleJobs.recommended,
             )
         }
-        JobsColumn(uiItems = uiItems)
+        HomeColumn(uiItems = homeUiItems)
     }
 }
 

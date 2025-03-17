@@ -5,4 +5,7 @@
     <string name="saved">Saved</string>
     <string name="notifications">Notifications</string>
     <string name="popular_jobs">Popular Jobs</string>
+    <string name="recommended_jobs">Recommended Jobs</string>
+    <string name="featured_jobs">Featured Jobs</string>
+    <string name="see_all">See all</string>
 </resources>

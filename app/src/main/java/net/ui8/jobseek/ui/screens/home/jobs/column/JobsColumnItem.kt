@@ -1,4 +1,4 @@
-package net.ui8.jobseek.ui.screens.home
+package net.ui8.jobseek.ui.screens.home.jobs.column
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column

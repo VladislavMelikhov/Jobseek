@@ -16,4 +16,9 @@ object Dimensions {
 
         val Medium = 44.dp
     }
+
+    object JobsRowItem {
+        val Height = 172.dp
+        val Spacing = Padding.Medium
+    }
 }

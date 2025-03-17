@@ -1,7 +1,7 @@
-package net.ui8.jobseek.ui.screens.home
+package net.ui8.jobseek.ui.screens.home.jobs.row
 
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -11,12 +11,12 @@ import net.ui8.jobseek.ui.theme.JobseekTheme
 import net.ui8.jobseek.ui.theme.Padding
 
 @Composable
-fun JobsColumn(
+fun JobsRow(
     uiItems: List<JobsUiItem>,
 ) {
-    LazyColumn(
+    LazyRow(
         modifier = Modifier
-            .padding(horizontal = Padding.Medium)
+            .padding(vertical = Padding.Medium)
     ) {
         items(
             contentType = { index ->
@@ -35,12 +35,13 @@ fun JobsColumn(
 
 @Composable
 @Preview
-fun JobsColumnPreview() {
+private fun JobsRowPreview() {
     JobseekTheme(darkTheme = false) {
+        val converter = JobsUiItemsConverterImpl()
         Surface {
-            JobsColumn(
-                uiItems = SampleJobs.popular
-                    .let(JobsUiItemsConverter::convertToUiItems)
+            JobsRow(
+                uiItems = SampleJobs.recommended
+                    .let(converter::convertToUiItems)
             )
         }
     }

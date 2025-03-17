@@ -1,4 +1,4 @@
-package net.ui8.jobseek.ui.screens.home
+package net.ui8.jobseek.ui.screens.home.jobs.column
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -22,7 +22,7 @@ fun JobsHeaderItem(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = Padding.Medium),
+            .padding(top = Padding.Large),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(
@@ -35,7 +35,7 @@ fun JobsHeaderItem(
         Text(
             style = MaterialTheme.typography.titleSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
-            text = "See all",
+            text = stringResource(R.string.see_all),
         )
     }
 }
